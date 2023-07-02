@@ -1,7 +1,6 @@
 import { render } from 'preact'
 import { App } from './app'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {app} from './base';
 import { Auth0Provider } from "@auth0/auth0-react";
 
 app;

@@ -1,19 +1,11 @@
 import '../styles/Login.css';
-import app from '../base';
-import firebase from '../base';
-import Cookies from 'cookies';
-import { CookiesProvider, useCookies } from 'react-cookie';
 import axios from 'axios';
 import {useState} from 'react'
-import {Credentials, App} from 'realm-web'
 import logo from '../img/usuario-perfil.png'
 import google from '../img/google.png'
 import { useAuth0 } from "@auth0/auth0-react";
 
 function Registro(){
-  var auth = firebase.auth();
-  var provider = new firebase.auth.GoogleAuthProvider();
-  const [cookies, setCookies] = useCookies(['name', 'email', 'logo'])
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [name, setName] = useState('')

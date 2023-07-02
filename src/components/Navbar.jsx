@@ -1,14 +1,10 @@
-import logo from '../img/logo.jfif'
+import logo from '../assets/logo.jpeg'
 import '../styles/navBar.css';
-import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import { CookiesProvider, useCookies } from 'react-cookie';
+import {  useCookies } from 'react-cookie';
 import user from '../img/usuario-perfil.png'
-import { NavLink } from 'react-bootstrap';
 import { Link } from 'preact-router';
 
 
@@ -19,7 +15,7 @@ function NavBar(){
       <header>
         <Navbar bg="dark" expand="lg">
         <Container fluid>
-        <a href="/"><img src={logo} width={80} height={80} className="logo" /></a>
+        <a href="/"><img src={logo} style={{width: "65px", height: "65px"}} className="logo mx-4" /></a>
         <div className='d-flex' style={{justifyContent: "end"}}>
           <Navbar.Toggle aria-controls="navbarScroll"/><Link style={{marginLeft: "15px", width: "8vh"}} href={cookies.name != null ? "/perfil" : "/registro"} ><img src={cookies.name != null ? cookies.logo : user}
               style={{borderRadius: "100%", cursor: "pointer"}} id="logo"
@@ -32,16 +28,6 @@ function NavBar(){
             >
               <Nav.Link href="/registro">Registro</Nav.Link>
               <Nav.Link href="/Informacion">Informacion</Nav.Link>
-              <NavDropdown title="Link" id="navbarScrollingDropdown">
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action4">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
-                  Something else here
-                </NavDropdown.Item>
-              </NavDropdown>
               <Nav.Link href="/nosotros">
                 Nosotros
               </Nav.Link>

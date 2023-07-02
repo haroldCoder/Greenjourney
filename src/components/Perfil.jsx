@@ -1,5 +1,5 @@
 import axios from 'axios';
-import react, {useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useCookies} from 'react-cookie';
 import '../styles/perfil.css'
 import {GrFormView} from 'react-icons/gr'
