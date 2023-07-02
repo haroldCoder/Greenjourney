@@ -1,0 +1,33 @@
+.noss{
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 87%;
+    margin-left: 12%;
+}
+.noss > .card{
+    background: #000;
+    margin: 10px;
+    width: 29% !important;
+    height: 60vh;
+}
+@media screen and (max-width: 509px) {
+    .noss{
+        margin-left: 0 !important;
+        flex-direction: column;
+        width: 95%;
+    }
+    .noss > .card{
+        width: 100% !important;
+    }
+}
+@media screen and (min-width: 510px) and (max-width: 650px) {
+    .noss > .card{
+        margin: 0 10% 20px !important;
+        width: 85% !important;
+    }
+    .noss{
+        margin-left: 0 !important;
+        flex-direction: column;
+        width: 100%;
+    }
+}
